@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NinetyTenDeveloper - นวัตกรรมโซลูชันซอฟต์แวร์ AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.0.18/24/outline/academic-cap.svg" rel="stylesheet"> <!-- Placeholder for icons, consider actual SVGs or a library -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .section-min-height {
+            min-height: calc(100vh - 4rem); /* Adjust 4rem based on actual navbar height */
+          }
+          /* === Animation Classes START === */
+          .fade-in-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          }
+          .fade-in-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          /* === Animation Classes END === */
+        }
+        /* You can add custom base styles or components here if needed */
+        body {
+            font-family: 'Sarabun', 'ui-sans-serif', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-200">
+
+    <!-- Navbar -->
+    <nav class="bg-slate-800/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="font-bold text-2xl text-sky-400">NinetyTen<span class="text-teal-400">Developer</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#services" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">บริการของเรา</a>
+                        <a href="#about" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">เกี่ยวกับเรา</a>
+                        <a href="#contact" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">ติดต่อเรา</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-slate-300 hover:bg-slate-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">บริการของเรา</a>
+                <a href="#about" class="text-slate-300 hover:bg-slate-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">เกี่ยวกับเรา</a>
+                <a href="#contact" class="text-slate-300 hover:bg-slate-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">ติดต่อเรา</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900 py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight fade-in-element">
+                <span class="block text-sky-400">NinetyTenDeveloper</span>
+                <span class="block text-slate-300 mt-2">ขับเคลื่อนธุรกิจของคุณด้วยนวัตกรรม AI</span>
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-slate-400 fade-in-element" style="transition-delay: 0.2s;">
+                เราผสมผสานศักยภาพของ AI 90% และความเชี่ยวชาญของมนุษย์ 10% เพื่อสร้างสรรค์โซลูชันซอฟต์แวร์ที่ตอบโจทย์ แม่นยำ และวัดผลได้จริงสำหรับธุรกิจของคุณ
+            </p>
+            <div class="mt-10 fade-in-element" style="transition-delay: 0.4s;">
+                <a href="#contact"
+                   class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-500 hover:bg-sky-600 md:py-4 md:text-lg md:px-10 transition-all duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-sky-400/50">
+                    ปรึกษาผู้เชี่ยวชาญ (ไม่มีค่าใช้จ่าย)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-element">
+                <h2 class="text-3xl font-extrabold text-sky-400 sm:text-4xl">บริการของเรา</h2>
+                <p class="mt-4 text-xl text-slate-400">
+                    โซลูชัน AI ใช้เป็นผู้ช่วยส่วนตัวอย่างแท้จริง และ สร้างสรรค์งานให้ง่ายดาย
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 p-8 rounded-lg shadow-xl transform hover:shadow-sky-500/30 hover:scale-105 transition-all duration-300 fade-in-element" style="transition-delay: 0.1s;">
+                    <div class="flex justify-center mb-4">
+                        <svg class="h-16 w-16 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0110.5 3h6a2.25 2.25 0 012.25 2.25v13.5A2.25 2.25 0 0116.5 21h-6a2.25 2.25 0 01-2.25-2.25V15m-3 0h3m0 0v3m0-3V9.75M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-teal-400 mb-3">พัฒนา Website เฉพาะทาง</h3>
+                    <p class="text-slate-400">
+                        สร้างระบบโซลูชั่นเว็บไซด์ ระบบ ด้วยมนุษย์เป็นผู้ควบคุมAI 
+                    </p>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-lg shadow-xl transform hover:shadow-sky-500/30 hover:scale-105 transition-all duration-300 fade-in-element" style="transition-delay: 0.2s;">
+                    <div class="flex justify-center mb-4">
+                       <svg class="h-16 w-16 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-teal-400 mb-3">บริการด้านเว็บไซต์</h3>
+                    <p class="text-slate-400">
+                        เพิ่มประสิทธิภาพการทำงาน ลดขั้นตอนที่ซ้ำซ้อน และลดความผิดพลาดด้วยระบบที่ขับเคลื่อนด้วย AI เพื่อให้ทีมของคุณมีเวลาโฟกัสกับงาน
+                    </p>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-lg shadow-xl transform hover:shadow-sky-500/30 hover:scale-105 transition-all duration-300 fade-in-element" style="transition-delay: 0.3s;">
+                    <div class="flex justify-center mb-4">
+                        <svg class="h-16 w-16 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM21 21l-5.197-5.197" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-teal-400 mb-3">LLMs Fire-Tund โดยเดต้าพิเศศของเรา</h3>
+                    <p class="text-slate-400">
+                       เพิ่มประสิทธิภาพการทำงาน ด้วยนวัตกรรมแห่งอนาคต ด้วย LLMs Modele ที่เราฝึกสอนมาอย่างดี 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in-element">
+                <h2 class="text-3xl font-extrabold text-sky-400 sm:text-4xl">ทำไมต้อง NinetyTenDeveloper</h2>
+                <p class="mt-4 text-xl text-slate-400">
+                    เราไม่ใช่แค่ผู้ให้บริการ แต่เราคือพันธมิตรที่พร้อมเติบโตไปพร้อมกับธุรกิจของคุณ
+                </p>
+            </div>
+            <div class="mt-10 space-y-8 text-left">
+                <div class="p-6 bg-slate-800 rounded-lg shadow-lg fade-in-element" style="transition-delay: 0.1s;">
+                    <h3 class="text-2xl font-semibold text-teal-400">AI 90% + มนุษย์ 10% = ประสิทธิภาพสูงสุด</h3>
+                    <p class="mt-2 text-slate-300">
+                        เราเชื่อมั่นในพลังของ AI เพื่อจัดการงานที่ซับซ้อนและต้องการความแม่นยำสูง ในขณะที่ผู้เชี่ยวชาญของเรา 10% จะดูแลด้านกลยุทธ์ ความคิดสร้างสรรค์ และการปรับโซลูชันให้เข้ากับบริบทธุรกิจของคุณอย่างแท้จริง
+                    </p>
+                </div>
+                <div class="p-6 bg-slate-800 rounded-lg shadow-lg fade-in-element" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-semibold text-teal-400">เทคโนโลยีล้ำสมัยเพื่อผลลัพธ์ที่เหนือกว่า</h3>
+                    <p class="mt-2 text-slate-300">
+                        ทีมงานของเราไม่หยุดนิ่งที่จะเรียนรู้และประยุกต์ใช้เทคโนโลยี AI ล่าสุด ไม่ว่าจะเป็น Machine Learning, Deep Learning, หรือ Large Language Models (LLMs) เพื่อให้คุณมั่นใจได้ว่าจะได้รับโซลูชันที่ทันสมัยและมีประสิทธิภาพ
+                    </p>
+                </div>
+                <div class="p-6 bg-slate-800 rounded-lg shadow-lg fade-in-element" style="transition-delay: 0.3s;">
+                    <h3 class="text-2xl font-semibold text-teal-400">เข้าใจความต้องการทางธุรกิจของคุณ</h3>
+                    <p class="mt-2 text-slate-300">
+                        เราเริ่มต้นจากการรับฟังและทำความเข้าใจเป้าหมายทางธุรกิจของคุณอย่างลึกซึ้ง เพื่อออกแบบและพัฒนาโซลูชันที่ตอบโจทย์ความท้าทายและสร้างผลกระทบเชิงบวกได้อย่างแท้จริง
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-slate-800">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-element">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-sky-400 sm:text-4xl">ติดต่อเราเพื่อรับคำปรึกษา</h2>
+                <p class="mt-4 text-xl text-slate-400">
+                    ทีมงานของเราพร้อมให้คำแนะนำและตอบทุกข้อสงสัยเกี่ยวกับโซลูชัน AI สำหรับธุรกิจของคุณ
+                </p>
+            </div>
+            <form id="contactForm" class="space-y-6 bg-slate-900 p-8 rounded-lg shadow-2xl">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-slate-300">
+                        ชื่อ-นามสกุล
+                    </label>
+                    <div class="mt-1">
+                        <input type="text" name="name" id="name" required
+                               class="appearance-none block w-full px-3 py-2 border border-slate-700 rounded-md shadow-sm placeholder-slate-500 focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm bg-slate-800 text-slate-100">
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-300">
+                        อีเมล
+                    </label>
+                    <div class="mt-1">
+                        <input id="email" name="email" type="email" autoComplete="email" required
+                               class="appearance-none block w-full px-3 py-2 border border-slate-700 rounded-md shadow-sm placeholder-slate-500 focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm bg-slate-800 text-slate-100">
+                    </div>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-slate-300">
+                        ข้อความ
+                    </label>
+                    <div class="mt-1">
+                        <textarea id="message" name="message" rows="4" required
+                                  class="appearance-none block w-full px-3 py-2 border border-slate-700 rounded-md shadow-sm placeholder-slate-500 focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm bg-slate-800 text-slate-100"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit"
+                            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 focus:ring-offset-slate-900 transition-all duration-300 ease-in-out transform hover:scale-110">
+                        ส่งข้อความ
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-400 text-sm">
+                © <span id="currentYear"></span> NinetyTenDeveloper. สงวนลิขสิทธิ์.
+            </p>
+            <p class="mt-1 text-slate-500 text-xs">
+                ขับเคลื่อนด้วยนวัตกรรมและเทคโนโลยี AI
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = menuButton.querySelector('svg:nth-child(1)'); 
+        const iconClose = menuButton.querySelector('svg:nth-child(2)');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconOpen.classList.toggle('block');
+            iconClose.classList.toggle('hidden');
+            iconClose.classList.toggle('block');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        iconOpen.classList.remove('hidden');
+                        iconOpen.classList.add('block');
+                        iconClose.classList.remove('block');
+                        iconClose.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Basic contact form handler
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert(`ขอบคุณ คุณ ${name} สำหรับการติดต่อ!\nทางเราจะติดต่อกลับไปที่อีเมล ${email} โดยเร็วที่สุดครับ\nข้อความของคุณ: ${message}`);
+                contactForm.reset();
+            } else {
+                alert('กรุณากรอกข้อมูลให้ครบถ้วนครับ');
+            }
+        });
+
+        // === Intersection Observer for fade-in animations START ===
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        const elementsToFadeIn = document.querySelectorAll('.fade-in-element');
+        elementsToFadeIn.forEach(el => {
+            observer.observe(el);
+        });
+        // === Intersection Observer for fade-in animations END ===
+    </script>
+
+</body>
+</html>
